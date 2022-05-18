@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css">
+    <script src="account.js"></script>
+</head>
+<body>
+<div class="topnav">
+    <a href="login.html">Sign In</a>
+    <a href="registration.html">Sign Up</a>
+    <a href="account.html">Account</a>
+    <a href = "index.html">Home</a>
+</div>
+
+
+<form class="mainbox" id = 'account'>
+
+    <div class="inputitem">
+        <div class="inputbox"  >
+
+            <Input type="text"  class ="form-control" placeholder="Name" name="Name" />
+
+        </div>
+        <div class="inputbox" >
+
+            <Input type="text"  class ="form-control" placeholder="Surname" name="Surname"/>
+        </div>
+
+
+        <div class="inputbox"  >
+
+            <Input type="password"  class ="form-control" placeholder="Password" name="Password"/>
+
+        </div>
+        <div class="inputbox"  >
+
+            <Input type="password"  class ="form-control" placeholder="Accessusers" name = "Accessusers"/>
+
+        </div>
+        <button class="button_form" onclick = "account('account')">Change</button>
+
+<a class="button_text" href="index.html">Logout</a>
+
+    </div>
+</form>
+<!--<form class="inputbox" id = 'change'>-->
+<!--    <Input type="text" placeholder="Name" name="Name" requret/><br>-->
+<!--    <Input type="text" placeholder="Surname" name="Surname" requret/><br>-->
+<!--    <Input type="text" placeholder="Password"  name="Password" requret/><br>-->
+<!--    <Input type="text" placeholder="Accessusers"  name="Accessusers" requret/>-->
+<!--</form><br>-->
+<!--<div class="inputbox">-->
+<!--    <button onclick="change('change')">Змінити дані</button>-->
+<!--</div><br>-->
+<!--<div class="inputbox">-->
+<!--    <a class ="logout" href="index.html">Вийти</a>-->
+<!--</div>-->
+</body>
+</html>
