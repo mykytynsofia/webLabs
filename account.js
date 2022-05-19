@@ -7,7 +7,7 @@ async function change(id) {
     var password = inputs['Password'].value;
     var accessusers = inputs['Accessusers'].value;
     if (password != password) {
-        alert("False password");
+        alert("wrong password");
         return 0;
     }
     var data = {
@@ -28,13 +28,9 @@ async function change(id) {
         if (response.status == 200) {
             var token = res.access_token
             localStorage.setItem('token', token);
-            //window.location.replace("./account.html");
         }
         else {
-            alert(res.info);
-            if (!result) {
-                Location.reload()
-            }
+            alert("try again");
         }
     });
 }

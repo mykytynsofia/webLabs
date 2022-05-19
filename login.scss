@@ -12,7 +12,7 @@ body {
   align-items: center;
   height: 100%;
   margin: 0;
-  background-color: #81A1D6;
+  background-color: $blue;
 }
 
 .topnav {
@@ -75,6 +75,21 @@ body {
   padding: 15px;
 
 }
+.rating_box{
+margin:5%;
+
+}
+        th, td {
+ text-align: left;
+  padding: 8px;
+          background-color:$yellow;
+          font-size: 1.5em;
+        }
+        b{
+          color:$yellow;
+           font-size: 2em;
+        }
+
 
 .button_form {
   @include submit

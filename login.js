@@ -6,19 +6,19 @@ async function login(id) {
     var password = inputs['password'].value;
     var hash = btoa(username + ":" + password);
     var url = login_url;
-    let h = new Headers({
+    let headers = new Headers({
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
     });
-    h.append('Accept', 'application/json');
+    headers.append('Accept', 'application/json');
     let auth = 'Basic ' + hash;
-    h.append('Authorization', auth);
+    headers.append('Authorization', auth);
     const request = new Request(url,
         {
             method: 'POST',
             credentials: 'same-origin',
             mode: 'cors',
-            headers: h
+            headers: headers
         });
     await fetch(request).then(async (response) => {
         var res = await response.json();
@@ -28,7 +28,7 @@ async function login(id) {
             window.location.replace("./rating.html");
         }
         else {
-            alert("Wrong credentials")
+            alert("wrong credentials")
         }
     });
     return 0;

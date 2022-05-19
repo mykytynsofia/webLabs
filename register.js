@@ -8,10 +8,6 @@ async function register(id) {
     var username = inputs['Username'].value;
     var password = inputs['Password'].value;
     var accessusers = inputs['Accessusers'].value;
-    if (password != password) {
-        alert("Error password");
-        return 0;
-    }
     var data = {
         "id": id,
         "name": name,
@@ -32,13 +28,10 @@ async function register(id) {
         if (response.status == 200) {
             var token = res.access_token
             localStorage.setItem('token', token);
-            //window.location.replace("./account.html");
+            window.location.replace("./rating.html");
         }
         else {
-            alert(res.info);
-            if (!result) {
-                Location.reload()
-            }
+            alert("try again");
         }
     });
 }
